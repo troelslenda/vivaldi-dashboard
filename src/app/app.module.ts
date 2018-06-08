@@ -8,10 +8,12 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,
