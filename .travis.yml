@@ -1,6 +1,5 @@
 #.travis.yml
 
-
 sudo: required
 dist: trusty
 addons:
@@ -26,8 +25,6 @@ before_script:
 
 script:
   - ng build --prod
-  - ng test --watch=false
-  - ng e2e
   - firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
