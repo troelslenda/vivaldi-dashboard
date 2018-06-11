@@ -27,8 +27,9 @@ export class AppComponent implements OnInit {
     }
   }
 
-  openLink() {
+  openLink(link) {
     console.log('open the link')
+    window.location.href=link
   }
 
   ngOnInit() {

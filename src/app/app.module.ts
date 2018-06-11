@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -20,7 +22,8 @@ import { AutofocusDirective } from './autofocus.directive';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
