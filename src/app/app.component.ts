@@ -15,18 +15,6 @@ export class AppComponent implements OnInit {
 
   searchGoogle(searchphrase: HTMLInputElement) {
     window.location.href = `https://www.google.com/search?q=${searchphrase.value}`;
-    return;
-    switch (searchphrase.value.slice(0, 2)) {
-      case 'g ':
-        window.location.href = `https://www.google.com/search?q=${searchphrase.value.slice(2)}`;
-        break;
-      case 'y ':
-        window.location.href = `https://www.youtube.com/results?search_query=${searchphrase.value.slice(2)}`;
-        break;
-      default:
-        window.location.href = 'http://'+ searchphrase.value;
-        break;
-    }
   }
 
   openLink(link) {
