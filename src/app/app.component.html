@@ -11,12 +11,5 @@
 </mat-toolbar>
 
 
+<app-marks-collection></app-marks-collection>
 
-
-<mat-grid-list cols="4">
-  <mat-grid-tile *ngFor="let item of items | async">
-      <a [href]="openLink(item.url)" mat-button>
-        <mat-card>{{item.title}}</mat-card>
-      </a>
-  </mat-grid-tile>
- </mat-grid-list>

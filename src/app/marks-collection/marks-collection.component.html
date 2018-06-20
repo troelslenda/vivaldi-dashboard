@@ -1,0 +1,7 @@
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let mark of marks | async" >
+    <app-mark [mark]="mark"></app-mark>
+  </mat-grid-tile>
+ </mat-grid-list>
+
+ <button mat-raised-button>Add new mark</button>
