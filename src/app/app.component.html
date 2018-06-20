@@ -1,48 +1,22 @@
-<form (submit)="searchGoogle(searchPhrase)">
+
+
+<mat-toolbar>
+  <span>Troels' Dashboard</span>
+  <span class="example-fill-remaining-space"></span>
+  <form (submit)="searchGoogle(searchPhrase)">
     <mat-form-field class="example-full-width">
         <input #searchPhrase matInput appAutofocus placeholder="Search Google">
       </mat-form-field>
 </form>
+</mat-toolbar>
 
 
-<mat-grid-list cols="4" rowHeight="3:1">
-  <mat-grid-tile>
-    <a (click)="openLink('https://console.firebase.google.com/u/0/project/wedbox-develop/overview')" mat-button>
-      <mat-card>Firebase Console</mat-card>
-    </a>
+
+
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let item of items | async">
+      <a [href]="openLink(item.url)" mat-button>
+        <mat-card>{{item.title}}</mat-card>
+      </a>
   </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://mail.google.com/mail/u/0/#inbox')" mat-button>
-      <mat-card>Google Mail</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://makeabledk.slack.com/')" mat-button>
-      <mat-card>Slack</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://makeable.manuscript.com/f/filters/286/My-Cases')" mat-button>
-      <mat-card>Manuscript</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://www.algolia.com/manage/applications')" mat-button>
-      <mat-card>Algolia</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://dashboard.stripe.com/')" mat-button>
-      <mat-card>Stripe</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('https://github.com')" mat-button>
-      <mat-card>GitHub</mat-card>
-    </a>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <a (click)="openLink('play.google.com/music/listen?u=1#/albums')" mat-button>
-      <mat-card>Google Music</mat-card>
-    </a>
-  </mat-grid-tile>
+ </mat-grid-list>
