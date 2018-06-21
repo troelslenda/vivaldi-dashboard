@@ -30,7 +30,7 @@ import { MarkComponent } from './mark/mark.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
