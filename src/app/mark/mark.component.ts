@@ -10,7 +10,7 @@ export class MarkComponent implements OnInit {
 
   @Input() mark
 
-  openLink(link) {
+  validateLink(link) {
     return this.sanitizer.bypassSecurityTrustUrl(link);
   }
 
